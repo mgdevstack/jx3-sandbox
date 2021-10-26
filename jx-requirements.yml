@@ -5,8 +5,8 @@ spec:
     enabled: false
     schedule: ""
   cluster:
-    chartRepository: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts
-    clusterName: kind
+    chartRepository: http://bucketrepo.jx.svc.zke/bucketrepo/charts
+    clusterName: kubernetes
     devEnvApprovers:
     - todo
     environmentGitOwner: todo
@@ -17,10 +17,10 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
-  - key: staging
-  - key: production
+  # - key: staging
+  # - key: production
   ingress:
-    domain: ""
+    domain: "roost-controlplane.10.10.0.10.nip.io"
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
